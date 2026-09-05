@@ -1,0 +1,96 @@
+SFG: file tranfer from producer to consumer.
+Login File geteway
+
+Create a community:
+Click on Participent >> Communities
+Add new comunity >> Provide community name >> click on next.
+Tick the partner initiation protocal connection to mail box.
+Also Tick the Partner listen for protocal connection and select all the listed protocals.
+Click on next.
+enable notification (depends on your choice either choose yes or no.)
+Click on next
+Click on finish.
+
+Create Partners: (producer and consumer)
+Click on participents >> Partners>> 
+under the partner we make the producer and consumer first make the consumer steps are below:
+Create Producer:
+Select partners and Click on create >> select the community which you have previously created.
+Click on next.
+Fill all the mandatory field an click on next.
+Fill the username and password for login also fill all mandatory required fields.
+click on next >> add partner and roles (here we need to make this parner as producer or consumer or if you want provide access to pdoducer and consumer both.
+select producer or consumer and click on next(We select both)
+click on next >> click on next >> click on finish.
+
+
+
+Create a consumer:
+
+Select partners and Click on create >> select the community which you have previously created.
+Click on next.
+Fill all the mandatory field an click on next.
+Fill the username and password for login also fill all mandatory required fields.
+click on next >> add partner and roles (here we need to make this parner as producer or consumer or if you want provide access to pdoducer and consumer both.
+select producer or consumer and click on next(we select consumer)
+click on next >> click on next >> click on finish.
+
+Groups:
+Click on Participent >> Groups >> by default All partners group is already created if you want you can create a new groups.
+Slect the all partners and getiing all the partners are added.
+
+To login producer and consumer you need to login myfile gateway.
+Check the by login my file gateway producer and consumer credentials are working.
+
+
+Login file gateway via admin user credential.
+Routing:
+Create template:
+click on routes >> templates >> create >> provide the template name >> Type (they provide two types of routes static and dynamic) We choosen Static.
+Static: under static routes we can define file is going to be the which consumer.
+Dynamic: under the dynamic routing when the file is being trnaferring that time it decide the file going to be the which consumer.
+
+Special characters: no need to do any modification leave as it is default.
+Groups: Producer group >> add group >> choose group ( choose the groups you previously created or choose the default group all partners)
+Consumer group >> add group >> choose group ( choose the groups you previously created or choose the default group all partners)
+We choosen the default group all partners.
+
+Provisioning fact: leave as it is default.
+Producer:
+Under the producer we can define the structure of file which we can transfer:
+Click on Add >> producer file structure:
+If you don't know which type of file you can transfer choose unknown  under the producer file type (we also choosen unknown).
+File name pattern as regular expression: Choose the patern which type of file is comming or if you provide .+ any type of file coming)
+File name pattern group fact names,comma delimit leave blank as it is.
+save.
+
+Consumer:
+add consumer >> new delivery channel >> pattern for consumer mailbox path >> if you dont have mailbox and you want to create a new mail box tick first line. second line is alredy ticked no need to change.
+Click on add.
+Consumer file structure:
+If you don't know which type of file you can transfer choose unknown  under the producer file type (we also choosen unknown).
+File name format (${producer filename} provide the file name as per instruction.
+save aslo save all remaining topics which appeared in screen)
+
+Create Channels:
+click on Routes >> Channels (under the channel we can define which template is being used for which producer and consumer.)
+Click on create >> create a new routing channel >> Routing channel template (choose previously created template) >> producer (choose created template) >> Consumer (choose created consumer)
+Click on save.
+sign out file gateway and login myfile gateway via the producer credential.
+Basicaly we need to send the file from the producer to consumer.
+Go to upload files
+select the mailbox path (/).
+choose file from your system.
+Send.
+then you recieved the file transfer is completed 
+slect file. check route and delivery.
+
+
+sign out producer and login consumer to check file is being recieved on consumer side.
+
+click on finds or if you want to check for specific producer and consumer you need to fill all required mandatory fields if you click on finds it will search all file transfers).
+if you want to download click on download files select file click on download and file is downloaded in to the system.
+
+
+
+
